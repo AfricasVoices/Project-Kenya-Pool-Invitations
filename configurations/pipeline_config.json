@@ -1,0 +1,45 @@
+{
+  "PipelineName": "Kenya-Pool-Invitations",
+  "RawDataSources": [
+    {
+      "SourceType": "RapidPro",
+      "Domain": "textit.in",
+      "TokenFileURL": "gs://avf-credentials/kenya-pool-invitations-textit-token.txt",
+      "ContactsFileName": "kenya_pool_invitations_contacts",
+      "ActivationFlowNames": [
+        "kenya_pool_invitations_activation"
+      ],
+      "SurveyFlowNames": [
+
+      ],
+      "TestContactUUIDs": [
+        "1b0c3df5-4a31-4809-9c06-a1ffc4553da1"
+      ]
+    }
+  ],
+  "ListeningGroupCSVURLs": [],
+  "PhoneNumberUuidTable": {
+    "FirebaseCredentialsFileURL": "gs://avf-credentials/avf-id-infrastructure-firebase-adminsdk-6xps8-b9173f2bfd.json",
+    "TableName": "Kenya_Pool_Invitations_phone_number_avf_phone_id"
+  },
+  "OperationsDashboard": {
+    "FirebaseCredentialsFileURL": "gs://avf-credentials/avf-dashboards-firebase-adminsdk-gvecb-ef772e79b6.json"
+  },
+  "RapidProKeyRemappings": [
+    {"RapidProKey": "avf_phone_id", "PipelineKey": "uid"},
+
+    {"RapidProKey": "Invitation_Response (Text) - kenya_pool_invitations_activation", "PipelineKey": "invitation_response_raw", "IsActivationMessage": true},
+    {"RapidProKey": "Invitation_Response (Run ID) - kenya_pool_invitations_activation", "PipelineKey": "invitation_response_run_id"},
+    {"RapidProKey": "Invitation_Response (Time) - kenya_pool_invitations_activation", "PipelineKey": "sent_on"}
+  ],
+  "ProjectStartDate": "2000-01-01T00:00:00+03:00",
+  "ProjectEndDate": "2100-01-01T00:00:00+03:00",
+  "FilterTestMessages": false,
+  "MoveWSMessages": false,
+  "AutomatedAnalysis": {
+
+  },
+  "MemoryProfileUploadURLPrefix": "gs://avf-pipeline-logs-performance-nearline",
+  "DataArchiveUploadURLPrefix": "gs://pipeline-execution-backup-archive",
+  "BucketDirPath": "2021/Kenya-Pool-Invitations"
+}
